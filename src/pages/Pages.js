@@ -8,7 +8,7 @@ import Recipe from "./Recipe";
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from 'react-router-dom';
 
-function Pages() {
+const Pages = () => {
     let location = useLocation();
 
     return (

@@ -4,7 +4,7 @@ import {motion} from 'framer-motion';
 import {Link, useParams} from 'react-router-dom';
 import { useState } from 'react';
 
-function Cuisine() {
+const Cuisine = () => {
 
     const [cuisine, setCuisine] = useState([]);
     let params = useParams();
@@ -43,7 +43,7 @@ function Cuisine() {
 
 const Grid = styled(motion.div)`
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
     grid-gap:1rem;
 `;
 

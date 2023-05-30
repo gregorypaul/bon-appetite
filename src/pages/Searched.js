@@ -4,12 +4,12 @@ import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-function Searched() {
+const Searched = () => {
     const [searchedRecipes, setSearchedRecipes] = useState([]);
     let params = useParams();
 
     const getSearched = async (name) => {
-        const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${name}&apiKey=${process.env.REACT_APP_API_KEY}&number=9`);
+        const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${name}&apiKey=${process.env.REACT_APP_API_KEY}&number=12`);
         const recipes = await data.json();
         setSearchedRecipes(recipes.results);
     };
@@ -35,17 +35,20 @@ function Searched() {
     );  
 }
 const Grid = styled.div`
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap:1rem;
+    grid-gap:2rem;
+    padding:30px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
 `;
 
 const Card = styled.div`
     text-align:center;
+    background: var(--green);
 
     img {
         max-width:100%;
-        border-radius:2rem;
+        border-radius:0;
     }
 
     a {
@@ -56,6 +59,11 @@ const Card = styled.div`
         text-align:center;
         padding-left:1rem;
         padding-right:1rem;
+        font-size:1rem;
+        font-family:'Poppins', sans-serif;
+        margin:0;
+        padding:0;
+        color:#fff;
     }
 `;
   
