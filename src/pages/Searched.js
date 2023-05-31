@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const Searched = () => {
     const [searchedRecipes, setSearchedRecipes] = useState([]);
@@ -20,6 +21,7 @@ const Searched = () => {
     },[params.search]);
 
     return(
+        <>
         <Grid>
             {searchedRecipes.map((item) =>{
                 return (
@@ -32,6 +34,8 @@ const Searched = () => {
                 )
             })}
         </Grid>
+        <Footer />
+        </>
     );  
 }
 const Grid = styled.div`
@@ -40,11 +44,18 @@ const Grid = styled.div`
     display:flex;
     flex-wrap:wrap;
     align-items:center;
+    justify-content:center;
+    padding-top:60px;
 `;
 
 const Card = styled.div`
     text-align:center;
-    background: var(--green);
+    background: #ff9200;
+    width:190px;
+    min-height:200px;
+    max-height:200px;
+    border:1px solid #000;
+    display:flex;
 
     img {
         max-width:100%;
@@ -56,14 +67,17 @@ const Card = styled.div`
     }
 
     h4 {
-        text-align:center;
-        padding-left:1rem;
-        padding-right:1rem;
         font-size:1rem;
         font-family:'Poppins', sans-serif;
         margin:0;
-        padding:0;
         color:#fff;
+        line-height:20px;
+        padding:10px;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        text-align:center;
+        justify-items: center;
     }
 `;
   

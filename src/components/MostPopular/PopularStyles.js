@@ -5,22 +5,6 @@ export const Section = styled.div`
     padding:0 15px;
 `;
 
-export const CardContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #1f2229;
-    overflow: hidden;
-    width:100%;
-    height:100%;
-`;
-
-export const Separator = styled.span`
-    margin-left: 10px;ale
-    margin-right: 10px;
-`;
-
-
 export const Wrapper = styled.div `
     max-width:1200px;
 	margin:0 auto;

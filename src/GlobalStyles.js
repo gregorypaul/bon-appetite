@@ -30,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
             -moz-osx-font-smoothing: grayscale;
             margin-top:50px;
             background: var(--white);
+            min-height:100vh;
         }
 
         h4 {

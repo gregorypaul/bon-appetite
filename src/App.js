@@ -15,7 +15,7 @@ import { GlobalStyle } from './GlobalStyles';
                         <Logo to ={'/'}><span className="normal darkGrey">BON</span>APPETITE</Logo>
                         <SearchBar />  
                         <div className="spoon-logo">
-                            <a href="https://spoonacular.com/food-api" target="_blank" rel="noreferrer"><p className="green">Powered by</p></a><a href="https://spoonacular.com/food-api" target="_blank" rel="noreferrer"><img src="./logo-simple-framed-green-gradient.svg" alt="spoonacular logo"/></a>
+                            <a href="https://spoonacular.com/food-api" target="_blank" rel="noreferrer"><p className="green">Powered by</p></a><a href="https://spoonacular.com/food-api" target="_blank" rel="noreferrer"><img src={"./logo-simple-framed-green-gradient.svg" ? "../logo-simple-framed-green-gradient.svg" : ""} alt="spoonacular logo"/></a>
                         </div> 
                     </Nav>
                     <Pages />
