@@ -40,26 +40,36 @@ const Searched = () => {
 }
 const Grid = styled.div`
     grid-gap:2rem;
-    padding:30px;
     display:flex;
     flex-wrap:wrap;
     align-items:center;
     justify-content:center;
-    padding-top:60px;
+    @media(max-width:768px) {
+        padding:30px;
+    }
+    padding:60px 0;
 `;
 
 const Card = styled.div`
     text-align:center;
     background: #ff9200;
+    @media(max-width:768px) {
+        width:100%;
+        display:block;
+    }
     width:190px;
     min-height:200px;
     max-height:200px;
+    @media(max-width:768px) {
+        max-height:unset;
+    }
     border:1px solid #000;
     display:flex;
 
     img {
         max-width:100%;
         border-radius:0;
+        object-fit: cover;
     }
 
     a {

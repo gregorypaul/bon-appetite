@@ -13,7 +13,7 @@ Logo,
 
 const Footer = () => {
 return (
-	<Box>
+	<Box id="box">
 	<h1 style={{ color: "green",
 				textAlign: "center",
 				marginTop: "-50px" }}>
@@ -64,7 +64,7 @@ return (
             </Column>
 		</Row>
         <Horizontal />
-        <Copyright>
+        <Copyright id="copyright">
             <Logo to ={'/'}><span className="normal white">BON</span>APPETITE</Logo>
             <div>Copyright © 2023 All Rights Reserved.</div>
         </Copyright>

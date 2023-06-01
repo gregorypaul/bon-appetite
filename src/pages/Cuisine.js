@@ -44,7 +44,9 @@ const Cuisine = () => {
 const Grid = styled(motion.div)`
     display:grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap:1rem;
+    grid-gap:2rem;
+    
+
 `;
 
 const Card = styled.div`

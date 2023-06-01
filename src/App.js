@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import SearchBar from './components/Search';
 import { GlobalStyle } from './GlobalStyles';
+
  const App = () => {
     return (
         <>
@@ -65,14 +66,14 @@ const Nav = styled.div`
             text-decoration:none;
             align-self:center;
             @media(max-width:992px) {
-                display;none;
+                display:none;
             }
         }
 
         img {
             max-height:35px;
             @media(max-width:992px) {
-                display;none;
+                display:none;
             }
         }
     }

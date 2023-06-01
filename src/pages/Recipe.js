@@ -23,27 +23,27 @@ const Recipe = () => {
         <div>
             <DetailWrapper>
                 <Info>
-                    <div>
+                    <div className='details'>
                         <h2>{details.title}</h2>
                         <img src={details.image} alt={details.text} />
                     
                         <Button className={activeTab ==='instructions' ? 'active' : ''} onClick={() => setActiveTab('instructions')}>Instructions</Button>
                         <Button className={activeTab==='ingredients' ? 'active' : ''} onClick={() => setActiveTab('ingredients')}>Ingredients</Button>
                     </div>
-                    <div>
-                    {activeTab === 'instructions' && (
-                        <div>
-                            <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
-                            <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
-                        </div>
-                    )}
-                    {activeTab === 'ingredients' && (
-                    <ul>
-                    {details.extendedIngredients.map((ingredient) => (
-                        <li key={ingredient.id}>{ingredient.original}</li>
-                    ))}
-                </ul>
-                    )}
+                    <div className='ingredients'>
+                        {activeTab === 'instructions' && (
+                            <div>
+                                <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
+                                <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
+                            </div>
+                        )}
+                        {activeTab === 'ingredients' && (
+                        <ul>
+                            {details.extendedIngredients.map((ingredient) => (
+                                <li key={ingredient.id}>{ingredient.original}</li>
+                            ))}
+                        </ul>
+                        )}
                     </div>
                 </Info>
             </DetailWrapper>
@@ -53,16 +53,21 @@ const Recipe = () => {
 
 const DetailWrapper = styled.div`
     display:flex;
-    @media(max-width:992px) {
-        flex-direction:column;
-    }
+    flex-direction:column;
     padding:30px;
     max-width:1200px;
     margin:0 auto;
+    @media(max-width: 768px ) {
+        display:block;
+        padding:5px;
+    }
     justify-content: center;
     .details {
         display: flex;
         flex-direction:column;
+        @media(max-width: 768px) {
+            justify-content: center;
+        }
     }
     h2{
         font-size:2.5rem;
@@ -96,6 +101,11 @@ const DetailWrapper = styled.div`
     }
     img {
         width:400px;
+        @media(max-width: 768px ) {
+            max-width:100%;
+            width:100%;
+            object-fit:cover;
+        }
         height:250px;
         object-fit:contain;
         display:block;
@@ -111,10 +121,19 @@ const Button = styled.button`
     margin-right:2rem;
     font-weight:600;
     margin-bottom:2rem;
+    width:inherit;
+    @media(max-width: 768px ) {
+        width:100%;
+    }
 `;
 
 const Info = styled.div`
     display:flex;
+    @media(max-width: 768px ) {
+        display:block;
+        padding:0 15px;
+        margin: 0 auto;
+    }
     gap:2rem;
     padding:30px;
 `;

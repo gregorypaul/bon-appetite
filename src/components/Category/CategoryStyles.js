@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 export const List = styled.div`
     display:flex;
+    @media(max-width: 768px) {
+        justify-content: center;
+    }
     .cat-container {
         display:flex;
         margin-bottom:1rem;

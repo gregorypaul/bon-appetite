@@ -2,15 +2,15 @@ import styled from 'styled-components';
 
 export const FormStyle = styled.form`
     width:680px;
-    @media(max-width:768px) {
-        width:auto;
+    @media(max-width:992px) {
+        width:100%;
     }
 `;
 export const SearchContainer = styled.div`
     /* background-color:red; */
-    width: auto;
-    @media(max-width:768px) {
-        width:682px;
+    width: 680px;
+    @media(max-width:992px) {
+        width:100%;
     }
     border-radius:100px;
     margin:5px 0;
@@ -78,6 +78,10 @@ export const SearchContainer = styled.div`
         height:41px;
         border-radius:0 81px 81px 0;
         border:solid 1px #ccc;
+        button {
+            border:none;
+            background:none;
+        }
     }
     input {
         width:100%;
