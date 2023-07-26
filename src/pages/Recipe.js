@@ -121,7 +121,7 @@ const Button = styled.button`
     margin-right:2rem;
     font-weight:600;
     margin-bottom:2rem;
-    width:inherit;
+    width:400px;
     @media(max-width: 768px ) {
         width:100%;
     }
