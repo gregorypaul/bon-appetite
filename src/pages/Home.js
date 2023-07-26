@@ -4,9 +4,9 @@ import MostPopular from "../components/MostPopular";
 import { motion } from "framer-motion";
 import styled from 'styled-components';
 import Category from "../components/Category";
-// import Search from "../components/Search";
 import Wave from "../components/Wave";
 import Footer from '../components/Footer';
+
 const Home = () => {
     return (
         <motion.div

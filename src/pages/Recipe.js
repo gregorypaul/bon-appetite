@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styled from "styled-components";
 import { useParams } from 'react-router-dom';
 import React from 'react';
+import Footer from '../components/Footer';
 
 const Recipe = () => {
 
@@ -47,6 +48,7 @@ const Recipe = () => {
                     </div>
                 </Info>
             </DetailWrapper>
+            <Footer />
         </div>
     )
 }
