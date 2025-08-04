@@ -56,7 +56,7 @@ export const GlobalStyle = createGlobalStyle`
         /* Utility classes */
 
         .container {
-            max-width:1200px;
+            max-width:1400px;
             margin:0 auto;
         }
 
@@ -76,4 +76,3 @@ export const GlobalStyle = createGlobalStyle`
             color: var(--darkGrey);
         }
 `;
-
