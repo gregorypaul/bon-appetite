@@ -59,6 +59,7 @@ export const GlobalStyle = createGlobalStyle`
             max-width:1400px;
             margin:0 auto;
         }
+            
 
         .green {
             color:var(--green);
@@ -75,4 +76,23 @@ export const GlobalStyle = createGlobalStyle`
         .darkGrey {
             color: var(--darkGrey);
         }
+
+        @media(max-width:576px) {
+        .splide__track {
+            overflow: visible !important;
+            }
+            .splide__track::before,
+            .splide__track::after {
+            display: none !important;
+            background: none !important;
+            background-image: none !important;
+            opacity: 0 !important;
+            content: none !important;
+            width: 0 !important;
+            height: 0 !important;
+            }
+        }
+       
+
+
 `;

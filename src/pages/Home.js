@@ -45,14 +45,19 @@ const Container = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   @media (max-width: 768px) {
-    display: flex;
     flex-direction: column-reverse;
     justify-content: center;
+  }
+  @media (max-width: 567px) {
+    display: block;
+    max-width: 100vw;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
   }
   gap: 2rem;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  padding: 2rem 0;
+  padding: 2rem;
   .info {
     padding: 0 15px;
   }

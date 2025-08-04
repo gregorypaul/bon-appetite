@@ -57,10 +57,14 @@ function MostPopular() {
                 perPage: 3,
               },
               567: {
-                padding: { left: "3rem", right: "3rem" },
-                perPage: 2,
+                perPage: 1,
+                padding: { left: "0.5rem", right: "0.5rem" }, // less padding
                 arrows: true,
                 pagination: true,
+                gap: "0.5rem",
+                autoWidth: true,
+                fixedWidth: false,
+                fixedHeight: false,
               },
             },
             arrows: false,

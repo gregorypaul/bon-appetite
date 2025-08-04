@@ -27,7 +27,12 @@ export const Card = styled.div`
   height: 240px; /* absolute control over card height */
   transition: transform 0.16s, box-shadow 0.16s;
   position: relative;
-
+  @media (max-width: 567px) {
+    width: 80vw; // use most of the viewport
+    min-width: 0;
+    max-width: 95vw;
+    height: 210px; // smaller height for mobile
+  }
   &:hover {
     transform: scale(1.06);
     box-shadow: 0 8px 30px rgba(46, 213, 115, 0.14);
@@ -42,6 +47,11 @@ export const CardImg = styled.img`
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   background: #fff;
+  @media (max-width: 567px) {
+    width: 100%;
+    height: 110px;
+    max-width: 100%;
+  }
 `;
 
 export const CardTitle = styled.p`
@@ -64,4 +74,10 @@ export const CardTitle = styled.p`
   box-shadow: 0 -2px 8px rgba(46, 213, 115, 0.03);
   position: relative;
   z-index: 2;
+  @media (max-width: 567px) {
+    font-size: 0.98rem;
+    padding: 0.6rem 0.5rem;
+    height: 90px;
+    -webkit-line-clamp: 2;
+  }
 `;
